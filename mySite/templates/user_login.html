@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+<body>
+<center>
+  <div style="height:300px;width:700px;background-color:grey;">
+    <br>
+    <h1>Login</h1><br>
+    <form method="post">
+      {% csrf_token %}
+      <label>Username: </label>
+      <input type="text" name="username" placeholder="enter username here..."><br><br>
+      <label>Password: </label>
+      <input type="password" name="password" placeholder="enter password here..."><br><br>
+      <br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+    </form><br><br>
+    <a href="{% url 'user_register' %}">to register click here...</a>
+  </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<center>
+  <div style="height:300px;width:700px;background-color:grey;">
+    <br>
+    <h1>My Profile</h1><br>
+    {% if user.is_authenticated %}
+    Welcome &nbsp;<h3>{{user.username}}</h3>
+    <a href="{% url 'user_logout' %}"><button>Logout</button></a>
+    {% endif %}
+    <br>
+    <a href="{% url 'password_change' %}"><button>Change Password</button></a>
+  </div>
+</center>
+</body>
+</html>
